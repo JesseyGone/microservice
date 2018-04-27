@@ -1,0 +1,18 @@
+server:
+  port: 8761
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+eureka:
+  client:
+    register-with-eureka: false # 是否将自己注册到eureka server
+    fetch-registry: false # 是否从eureka server获取注册信息，单点server不需要同步其他server节点
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ # 设置与eureka server交互的地址，查询注册都需要依赖这个地址。多个地址用逗号隔开
+  server:
+    enable-self-preservation: false # 关闭自我保护（自我保护就是不注销微服务）
+    eviction-interval-timer-in-ms: 60000 # 清理（无效节点）间隔 默认60*1000毫秒

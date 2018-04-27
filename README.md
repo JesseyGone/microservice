@@ -7,5 +7,8 @@
 - 或者，将服务提供方网络地址写入到服务消费方的配置文件
 [参考](https://github.com/JesseyGone/microservice/blob/master/consumeruser/src/main/java/ind/lgh/consumeruser/controller/MovieController.java)
 
-
+# T01: 
+加入服务发现组件Eureka，配置一个Eureka Server和两个Eureka Client
+- 配置Client健康检查
+- 配置Server关闭自我保护，Client宕机踢出
 
