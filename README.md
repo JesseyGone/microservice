@@ -11,4 +11,5 @@
 加入服务发现组件Eureka，配置一个Eureka Server和两个Eureka Client
 - 配置Client健康检查
 - 配置Server关闭自我保护，Client宕机踢出
-
+- 配置Maven插件构建镜像并推送到docker私有仓库
+- 构建一个双节的Eureka Server HA集群
