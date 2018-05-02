@@ -12,4 +12,4 @@
 - 配置Client健康检查
 - 配置Server关闭自我保护，Client宕机踢出
 - 配置Maven插件构建镜像并推送到docker私有仓库
-- 构建一个双节的Eureka Server HA集群
+- 构建一个双节点的Eureka Server HA集群

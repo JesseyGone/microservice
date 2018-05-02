@@ -2,4 +2,4 @@ spring:
   application:
     name: discovery-eureka-ha
   profiles:
-    active: peer1
+    active: peer2

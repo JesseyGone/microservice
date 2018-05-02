@@ -49,11 +49,11 @@
                 </executions>
                 <configuration>
                     <!-- 指定镜像名称 仓库名/镜像名:标签名 -->
-                    <imageName>reg.vr.weilian.cn:33005/discovery-eureka-1.0</imageName>
+                    <imageName>reg.vr.weilian.cn:33005/${project.artifactId}</imageName>
                     <!-- 灵活地指定镜像tag -->
                     <imageTags>
-                        <imageTag>0.0.5</imageTag>
-                        <imageTag>latest</imageTag>
+                        <imageTag>${project.version}</imageTag>
+                        <!--<imageTag>latest</imageTag>-->
                     </imageTags>
                     <!--<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
 
