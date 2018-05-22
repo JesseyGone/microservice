@@ -13,6 +13,13 @@
 
     <dependencies>
         <dependency>
+            <groupId>ind.lgh</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <!-- eureka 已包含了ribbon -->
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
             <version>1.3.5.RELEASE</version>

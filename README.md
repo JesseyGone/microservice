@@ -13,3 +13,5 @@
 - 配置Server关闭自我保护，Client宕机踢出
 - 配置Maven插件构建镜像并推送到docker私有仓库
 - 构建一个双节点的Eureka Server HA集群
+- 添加一个provider，测试Ribbon负载均衡，启动顺序：eureka，provider，customer
+- 抽出一个common模块存放dependencies，父模块保持干净整洁，但每次都要先打包common模块
