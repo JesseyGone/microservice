@@ -16,6 +16,8 @@
         <module>pojos</module>
         <module>common</module>
         <module>provideruser2</module>
+        <module>consumeruserfeign</module>
+        <module>gatewayzuul</module>
     </modules>
 
     <parent>
