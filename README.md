@@ -26,5 +26,14 @@
 - 使用Zuul构建微服务网关
     ``启动顺序：eureka、provideruser、consumer、gatewayzuul``
     ``查看路由表：localhost:8019/routes``
+- Zuul上传文件，实现大文件上传
+    ``启动顺序：eureka、fileupload、gatewayzuul``
+    ``上传验证：localhost:8019/zuul/file/upload``
+    ``注意，统一通过zuul网关访问（8019，不要架空zuul直接访问微服务）``
+    ``大文件上传必须带上zuul前缀``
+- Zuul添加回退。Zuul高可用非常简单，多启动几个就行了，省略
+- 添加配置中心，并将provideruser改造为config client（配置文件仓库为git且在二级目录下）
+    ``启动顺序：eureka,config-server,provider-user``
+
 
 

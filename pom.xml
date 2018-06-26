@@ -18,6 +18,8 @@
         <module>provideruser2</module>
         <module>consumeruserfeign</module>
         <module>gatewayzuul</module>
+        <module>fileupload</module>
+        <module>configserver</module>
     </modules>
 
     <parent>

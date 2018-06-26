@@ -1,0 +1,19 @@
+server:
+  port: 8018
+spring:
+  application:
+    name: microservice-file-upload # 指定注册到eureka server上的应用名称
+  http:
+    multipart:
+      max-file-size: 2000Mb
+      max-request-size: 2500Mb
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true # 开启健康检查 - 需要spring-boot-starter-actuator依赖
+  instance:
+    prefer-ip-address: true # 将自己的IP注册到eureka server，如果为false（默认），则注册的是hostname
+    lease-renewal-interval-in-seconds: 30 # 续约更新时间间隔（默认30秒）
+    lease-expiration-duration-in-seconds: 90 # 续约到期时间（默认90秒）

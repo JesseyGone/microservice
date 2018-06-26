@@ -1,5 +1,6 @@
 package ind.lgh.gatewayzuul;
 
+import ind.lgh.gatewayzuul.filter.PreRequestLogFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -25,6 +26,14 @@ public class GatewayZuulApplication {
 //        // routePattern指定路由正则
 //        return new PatternServiceRouteMapper("","");
 //    }
+
+    /**
+     * 类型为pre的记录日志的过滤器
+     */
+    @Bean
+    public PreRequestLogFilter preRequestLogFilter() {
+        return new PreRequestLogFilter();
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(GatewayZuulApplication.class, args);
