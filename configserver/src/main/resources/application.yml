@@ -14,4 +14,25 @@ spring:
           # Git仓库密码
           password: 我的github密码会告诉你？
           # 搜索目录，Git仓库子目录
-          search-paths: config*
+          search-paths: '*'
+        encrypt:
+          enabled: false
+encrypt:
+#  key: mytestkey # 设置对称秘钥 - 发现对称加密不行啊
+# 设置非对称加密
+# 生成秘钥命令：keytool -genkeypair -alias mytestkey -keyalg RSA   -dname "CN=Web Server,OU=Unit,O=Organization,L=City,S=State,C=US"   -keypass changeme -keystore server.jks -storepass lghlgh
+  key-store:
+    location: classpath:/server.jks
+    password: lghlgh
+    alias: mytestkey
+    secret: changeme
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/ # hosts设置添加：127.0.0.1 peer1 peer2
+    healthcheck:
+      enabled: true # 开启健康检查 - 需要spring-boot-starter-actuator依赖
+  instance:
+    prefer-ip-address: true # 将自己的IP注册到eureka server，如果为false（默认），则注册的是hostname
+    lease-renewal-interval-in-seconds: 30 # 续约更新时间间隔（默认30秒）
+    lease-expiration-duration-in-seconds: 90

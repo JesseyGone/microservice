@@ -34,6 +34,12 @@
 - Zuul添加回退。Zuul高可用非常简单，多启动几个就行了，省略
 - 添加配置中心，并将provideruser改造为config client（配置文件仓库为git且在二级目录下）
     ``启动顺序：eureka,config-server,provider-user``
+- 配置中心使用依赖管理，spring-cloud版本定为Dalston.SR4，其他项目也要改，懒的改了
+- 配置中心配置非对称加密
+    ``验证：post请求http://localhost:8020/encrypt，body选row传入一值将对其加密（对应解密decrypt）``
+    ``但是测试访问带有加密属性的配置文件时，没有自动解密http://localhost:8111/password``
+- 添加动态调整配置支持，可手动刷新配置：http://localhost:8111/refresh
+- Config与Eureka配合使用
 
 
 

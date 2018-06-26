@@ -14,6 +14,11 @@ public class PreRequestLogFilter extends ZuulFilter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PreRequestLogFilter.class);
 
+    public PreRequestLogFilter(){
+        System.out.println("===================启动打印这一句话说明了Bean的默认scope为singleton，且它默认是非懒加载（在容器加载时就直接加载bean）======================");
+        System.out.println("===================请注意，启动打印的时机======================");
+    }
+
     @Override
     public String filterType() {
         return "pre";

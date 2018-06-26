@@ -7,6 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.cloud.netflix.zuul.filters.discovery.PatternServiceRouteMapper;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 
 /**
  * @author lgh
@@ -31,6 +32,8 @@ public class GatewayZuulApplication {
      * 类型为pre的记录日志的过滤器
      */
     @Bean
+    @Scope("singleton")
+//    @Scope("prototype")
     public PreRequestLogFilter preRequestLogFilter() {
         return new PreRequestLogFilter();
     }
