@@ -1,5 +1,5 @@
 spring:
   application:
-    name: discovery-eureka-ha
+    name: discovery-eureka
   profiles:
     active: peer1

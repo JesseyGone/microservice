@@ -1,0 +1,30 @@
+# 表示该docker-compose.yml文件使用的是Version 2 file format
+version: '2'
+# Version 2 file format的固定写法，为project定义服务
+services:
+  # 指定服务名称
+  discovery-eureka:
+    # 指定服务所使用的镜像
+    image: lgh/discovery-eureka:1.0-SNAPSHOT
+    # 暴露端口信息
+    ports:
+      - "8761:8761"
+  provider-user:
+    image: lgh/provider-user:1.0-SNAPSHOT
+    # 连接到discovery-eureka，使用的是SERVICE:ALIAS的形式
+    ports:
+      - "8000:8000"
+    links:
+      - discovery-eureka:discover
+  consumer-user:
+    image: lgh/consumer-user:1.0-SNAPSHOT
+    ports:
+      - "8010:8010"
+    links:
+      - discovery-eureka:discover
+  gateway-zuul:
+    image: lgh/gateway-zuul:1.0-SNAPSHOT
+    ports:
+      - "8019:8019"
+    links:
+      - discovery-eureka:discover

@@ -6,7 +6,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://discover:8761/eureka/
     healthcheck:
       enabled: true # 开启健康检查 - 需要spring-boot-starter-actuator依赖
   instance:
@@ -23,7 +23,7 @@ zuul:
     microservice-provider-user: /user/** # 自定义微服务访问路径，格式：serviceId = 指定路径
     microservice-file-upload: /file/**
     consumer-route: # 跟上一个一样，只是分开写了，consumer-route只是路由名，可以任意起名
-      service-id: microservice-consumer-user-feign
+      service-id: microservice-consumer-user
       path: /movie/**
   ignored-patterns: /**/admin/** # 忽略所有包含/admin/的路径（敏感路径）
 logging:

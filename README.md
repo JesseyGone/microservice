@@ -41,5 +41,16 @@
 - 添加动态调整配置支持，可手动刷新配置：http://localhost:8111/refresh
 - Config与Eureka配合使用
 
-
+# T02: 
+改造微服务，使用docker-compose编排部署
+- 改造的服务包括：
+    ``discoveryeureka 服务发现组件``
+    ``provideruser    服务提供者``
+    ``consumeruser    服务消费者``
+    ``gatewayzuul     API Gateway``
+    ``configserver    配置中心``
+- 使用docker-compose编排部署，配置maven私服deploy
+    ``第一步，整个项目microservice clean install``
+    ``第二步，将discoveryeureka项目中的docker-compose.yml拷贝到build完docker镜像的机器上``
+    ``启动docker compose up -d``
 

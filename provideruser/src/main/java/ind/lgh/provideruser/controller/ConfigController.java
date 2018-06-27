@@ -12,19 +12,19 @@ public class ConfigController {
     /**
      * 通过Config server访问Git仓库配置文件中的属性
      */
-    @Value("${author}")
-    private String author;
-
-    @Value("${password}")
-    private String password;
-
-    @GetMapping("/author")
-    public String author() {
-        return author;
-    }
-
-    @GetMapping("/password")
-    public String password() {
-        return password;
-    }
+//    @Value("${author}")
+//    private String author;
+//
+//    @Value("${password}")
+//    private String password;
+//
+//    @GetMapping("/author")
+//    public String author() {
+//        return author;
+//    }
+//
+//    @GetMapping("/password")
+//    public String password() {
+//        return password;
+//    }
 }

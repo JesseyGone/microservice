@@ -55,7 +55,7 @@
                 </executions>
                 <configuration>
                     <!-- 指定镜像名称 仓库名/镜像名:标签名 -->
-                    <imageName>reg.vr.weilian.cn:33005/${project.artifactId}</imageName>
+                    <imageName>lgh/${project.artifactId}</imageName>
                     <!-- 灵活地指定镜像tag -->
                     <imageTags>
                         <imageTag>${project.version}</imageTag>

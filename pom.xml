@@ -36,4 +36,17 @@
         <!--<tomcat.version>8.5.5</tomcat.version>-->
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://10.0.0.126:40889/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Internal Releases</name>
+            <url>http://10.0.0.126:40889/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
